@@ -9,7 +9,7 @@
 
 List any resources used here, or simply put `N/A` if not applicable.
 
-course slides + old lab recordings
+course slides + old lab recordings  
 oracle java documentation
 
 ## Verbal Collaboration
