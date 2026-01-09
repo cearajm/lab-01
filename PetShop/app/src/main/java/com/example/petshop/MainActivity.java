@@ -1,6 +1,7 @@
 package com.example.petshop;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.SortedMap;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-//        Cat pet = new Pet("");
+//        Pet pet = new Pet("");
         Cat cat = new Cat("Lucy");
         Dog dog = new Dog("Snoopy");
         Scorpion scorpion = new Scorpion("Scorponok");
@@ -28,14 +30,24 @@ public class MainActivity extends AppCompatActivity {
 
         petList.add(cat);
         petList.add(dog);
-        petList.add(scorpion);
+//        petList.add(scorpion);
+
+        ArrayList<Pettable> pettablePets = new ArrayList<Pettable>();
+        pettablePets.add(cat);
+        pettablePets.add(dog);
+//        pettablePets.add(scorpion);
 
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        Happy happy = new Happy();
+        Silly silly = new Silly();
+        System.out.println(happy.mood());
+        System.out.println(silly.mood());
+//        System.out.println(scorpion.getName());
+//        System.out.println(scorpion.speak());
+
+
+
+
     }
 
 

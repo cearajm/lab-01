@@ -11,7 +11,7 @@ public abstract class Pet {
         this.birthDate = new Date();
     }
 
-    public  abstract String speak();
+    public abstract String speak();
 
     public Pet(String name, Date birthDate) {
         this.name = name;
